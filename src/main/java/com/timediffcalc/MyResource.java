@@ -20,7 +20,7 @@ public class MyResource {
      */
     @GET
     @Path("/calculate")
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getTimeDifference(@QueryParam("hour1") int hour1,
                                       @QueryParam("min1")  int min1,
                                       @QueryParam("hour2") int hour2,
