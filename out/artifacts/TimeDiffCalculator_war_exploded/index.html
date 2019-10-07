@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>TimeDiffCalc</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <p><h2>This App helps you calculate time difference in 24 hour format for 24hrs timestamp irrespective of date</h2></p>
 </head>
 <body>
-<form action="rest/diffcalc/calculate" method="get" onsubmit="validation()" name="vform">
-    Enter Initial Hours:
-    <div id="hour1_div">
-        <input type="text" name="hour1" id="hour1" required=""/><br/><br/>
-        <div id="hour1_Validation_error"></div>
-    </div>
-    Enter Initial Mins:
-    <div id="min1_div">
-        <input type="text" name="min1" id="min1" required=""/><br/><br/>
-        <div id="min1_Validation_error"></div>
-    </div>
-    Enter Final Hours:
-    <div id="hour2_div">
-        <input type="text" name="hour2" id="hour2" required=""/><br/><br/>
-        <div id="hour2_Validation_error"></div>
-    </div>
-    Enter Final Mins:
-    <div id="min2_div">
-        <input type="text" name="min2" id="min2" required=""/><br/><br/>
-        <div id="min2_Validation_error"></div>
-    </div>
+    <form action="rest/diffcalc/calculate" method="get" onsubmit="return validation()" name="vform">
+        <div id="hour1_div">
+            <label>hour_one</label> <br>
+                Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
+            <div id="hour1_Validation_error"></div>
+        </div>
+        <div id="min1_div">
+            <label>min_one</label> <br>
+        Enter Initial Mins:<input type="text" name="min1" id="min1"/><br><br/>
+            <div id="min1_Validation_error"></div>
+        </div>
 
-    <div>
-        <input type="submit" name="submit" value="Get The Difference"/>
-    </div>
-</form>
+        <div id="hour2_div">
+            <label>hour_two</label> <br>
+        Enter Final Hours:<input type="text" name="hour2" id="hour2"/><br><br/>
+            <div id="hour2_Validation_error"></div>
+        </div>
+        <div id="min2_div">
+            <label>min_two</label> <br>
+        Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
+            <div id="min2_Validation_error"></div>
+        </div>
+        <div>
+        <input type="submit" name="submit" value="Get The Difference">
+        </div>
+    </form>
 
-
-<script>
+  <div id="eresult" style="color:#ff2507;"></div>
+    <script type="text/javascript">
 
     // SELECTING ALL TEXT ELEMENTS
     var hour1 = document.forms['vform']['hour1'];
@@ -51,90 +54,54 @@
 
 
     // SETTING ALL EVENT LISTENERS
-    hour1.addEventListener('blur', hour1Verify, true);
-    min1.addEventListener('blur', min1Verify, true);
-    hour2.addEventListener('blur', hour2Verify, true);
-    min2.addEventListener('blur',min2Verify, true);
+    username.addEventListener('blur', nameVerify, true);
+    email.addEventListener('blur', emailVerify, true);
+    password.addEventListener('blur', passwordVerify, true);
 
+        function validation() {
 
-
-    // event handler functions
-    function hour1Verify() {
-        if (hour1.value != "") {
-            hour1.style.border = "1px solid #5e6e66";
-            document.getElementById('hour1_div').style.color = "#5e6e66";
-            hour1_Validation_error.innerHTML = "";
-        }
-        if(hour1.value > 23 || hour1.value < 0 || hour1.value ===''){
+         if(hour1.value > 23 || hour1.value < 0 || hour1.value ===''){
             hour1.style.border = "1px solid red";
             document.getElementById('hour1_div').style.color = "red";
             hour1_Validation_error.textContent = "Give the Hour in 24 hour Format";
+            hour1.focus();
             return false;
-        }
-        else {
-            return true;
-        }
-    }
-    function min1Verify() {
-        if (min1.value != "") {
-            min1.style.border = "1px solid #5e6e66";
-            document.getElementById('min1_div').style.color = "#5e6e66";
-            min1_Validation_error.innerHTML = "";
-        }
-        if((min1.value > 60 && min1.value < 0 )|| min1.value ===''){
+            }
+
+         if((min1.value > 60 || min1.value < 0 || min1.value ===''){
             min1.style.border = "1px solid red";
             document.getElementById('min1_div').style.color = "red";
             min1_Validation_error.textContent = "Give the min in the correct format";
+            min1.focus();
             return false;
-        }
-        else {
-            return true;
-        }
-    }
-    function hour2Verify() {
-        if (hour2.value != "") {
-            hour2.style.border = "1px solid #5e6e66";
-            document.getElementById('hour2_div').style.color = "#5e6e66";
-            hour2_Validation_error.innerHTML = "";
-        }
-        if(hour2.value > 23 || hour2.value < 0 || hour2.value ===''){
+         }
+
+         if(hour2.value > 23 || hour2.value < 0 || hour2.value ===''){
             hour2.style.border = "1px solid red";
             document.getElementById('hour2_div').style.color = "red";
             hour2_Validation_error.textContent = "Give the Hour in 24 hour Format";
+            hour2.focus();
             return false;
-        }
-        else {
-            return true;
-        }
-    }
-    function min2Verify() {
-        if (min2.value != "") {
-            min2.style.border = "1px solid #5e6e66";
-            document.getElementById('min2_div').style.color = "#5e6e66";
-            min2_Validation_error.innerHTML = "";
-
-        }
-        if((min2.value > 60 && min2.value < 0 )|| min2.value ===''){
+            }
+         if(min2.value > 60 || min2.value < 0 || min2.value ===''){
             min2.style.border = "1px solid red";
             document.getElementById('min2_div').style.color = "red";
             min2_Validation_error.textContent = "Give the min in the correct format";
+            min2.focus();
             return false;
+         }
+          else
+            {
+               return  true;
+            }
         }
-        else {
-            return true;
-        }
-    }
-    function validation(vform) {
-
-        if(!confirm("Please re-check the inputs,Do you really want to submit the form?")){
-            return false;
-        }
-        vform.submit();
-    }
 
 
-</script>
 
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

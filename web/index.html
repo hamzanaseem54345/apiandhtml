@@ -12,7 +12,7 @@
 <body>
     <form action="rest/diffcalc/calculate" method="get" onsubmit="return validation()" name="vform">
         <div id="hour1_div">
-            <label>hour_one</label> <br>
+<!--            <label>hour_one</label> <br>-->
                 Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
             <div id="hour1_Validation_error"></div>
         </div>
@@ -28,7 +28,7 @@
             <div id="hour2_Validation_error"></div>
         </div>
         <div id="min2_div">
-            <label>min_one</label> <br>
+            <label>min_two</label> <br>
         Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
             <div id="min2_Validation_error"></div>
         </div>
@@ -44,7 +44,7 @@
     var hour1 = document.forms['vform']['hour1'];
     var min1 = document.forms['vform']['min1'];
     var hour2 = document.forms['vform']['hour2'];
-    var min1 = document.forms['vform']['min2'];
+    var min2 = document.forms['vform']['min2'];
 
     // SELECTING ALL ERROR DISPLAY ELEMENTS
     var hour1_Validation_error = document.getElementById('hour1_Validation_error');
@@ -60,7 +60,7 @@
 
         function validation() {
 
-         if(hour1.value > 23 || hour1.value < 0 || hour1.value ==''){
+         if(hour1.value > 23 || hour1.value < 0 || hour1.value ===''){
             hour1.style.border = "1px solid red";
             document.getElementById('hour1_div').style.color = "red";
             hour1_Validation_error.textContent = "Give the Hour in 24 hour Format";
@@ -68,7 +68,7 @@
             return false;
             }
 
-         if((min1.value > 60 || min1.value < 0 || min1.value ==''){
+         if((min1.value > 60 || min1.value < 0 || min1.value ===''){
             min1.style.border = "1px solid red";
             document.getElementById('min1_div').style.color = "red";
             min1_Validation_error.textContent = "Give the min in the correct format";
