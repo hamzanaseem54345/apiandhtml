@@ -1,6 +1,9 @@
 package com.timediffcalc;
 
 import javax.ws.rs.Path;
+
+import org.json.JSONObject;
+//import org.json.simple.JSONObject;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.*;
@@ -21,10 +24,10 @@ public class MyResource {
     @GET
     @Path("/calculate")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getTimeDifference(@QueryParam("hour1") int hour1,
-                                      @QueryParam("min1")  int min1,
-                                      @QueryParam("hour2") int hour2,
-                                      @QueryParam("min2") int min2)
+    public Response.ResponseBuilder getTimeDifference(@QueryParam("hour1") int hour1,
+                                                      @QueryParam("min1")  int min1,
+                                                      @QueryParam("hour2") int hour2,
+                                                      @QueryParam("min2") int min2)
     {
         long minDiff = 0;
         long hrDiff = 0;
@@ -82,8 +85,15 @@ public class MyResource {
 
         System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
 
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("Hours",hrDiff);
+        jsonObject.put("Mins", minDiff);
+
+
         return Response.status(200)
-                .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
-                .build();
+                .entity(jsonObject);
+               // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
+
     }
     }
