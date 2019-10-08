@@ -7,39 +7,18 @@
 
     <title>TimeDiffCalc</title>
     <link rel="stylesheet" href="style.css">
-    <p><h2>This App helps you calculate time difference in 24 hour format for 24hrs timestamp irrespective of date</h2></p>
-</head>
-<body>
-    <form action="rest/diffcalc/calculate" method="get" onsubmit="return validation()" name="vform">
-        <div id="hour1_div">
-            <label>hour_one</label> <br>
-                Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
-            <div id="hour1_Validation_error"></div>
-        </div>
-        <div id="min1_div">
-            <label>min_one</label> <br>
-        Enter Initial Mins:<input type="text" name="min1" id="min1"/><br><br/>
-            <div id="min1_Validation_error"></div>
-        </div>
+    <p>
+    <center>
+        <h3>Time Duration Calculator 24 hour clock - How many hours and minutes between two times</h3>
+    </center>
+    </p>
 
-        <div id="hour2_div">
-            <label>hour_two</label> <br>
-        Enter Final Hours:<input type="text" name="hour2" id="hour2"/><br><br/>
-            <div id="hour2_Validation_error"></div>
-        </div>
-        <div id="min2_div">
-            <label>min_two</label> <br>
-        Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
-            <div id="min2_Validation_error"></div>
-        </div>
-        <div>
-        <input type="submit" name="submit" value="Get The Difference">
-        </div>
-    </form>
-
-  <div id="eresult" style="color:#ff2507;"></div>
-    <script type="text/javascript">
-
+    <div id="eresult" style="color:#ff2507;"></div>
+    <script language="JavaScript" type = "text/javascript">
+    function showInput() {
+        document.getElementById('display').innerHTML =
+                    document.getElementById("user_input").value;
+    }
     // SELECTING ALL TEXT ELEMENTS
     var hour1 = document.forms['vform']['hour1'];
     var min1 = document.forms['vform']['min1'];
@@ -98,7 +77,37 @@
 
 
 
-    </script>
+  </script>
+</head>
+<body>
+    <form action="rest/diffcalc/calculate" method="get" onsubmit="return validation()" name="vform">
+        <div id="hour1_div">
+<!--            <label>hour_one</label> <br>-->
+                Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
+            <div id="hour1_Validation_error"></div>
+        </div>
+        <div id="min1_div">
+<!--            <label>min_one</label> <br>-->
+        Enter Initial Mins:<input type="text" name="min1" id="min1"/><br><br/>
+            <div id="min1_Validation_error"></div>
+        </div>
+
+        <div id="hour2_div">
+<!--            <label>hour_two</label> <br>-->
+        Enter Final Hours:<input type="text" name="hour2" id="hour2"/><br><br/>
+            <div id="hour2_Validation_error"></div>
+        </div>
+        <div id="min2_div">
+<!--            <label>min_two</label> <br>-->
+        Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
+            <div id="min2_Validation_error"></div>
+        </div>
+        <div>
+        <input type="submit" name="submit" value="Get The Difference"><br/>
+        </div>
+
+        <p><span id='display'></span></p>
+    </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

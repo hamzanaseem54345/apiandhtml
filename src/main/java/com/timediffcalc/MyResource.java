@@ -2,12 +2,15 @@ package com.timediffcalc;
 
 import javax.ws.rs.Path;
 
-import org.json.JSONObject;
+//import org.json.JSONObject;
+import org.json.simple.JSONObject;
 //import org.json.simple.JSONObject;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response.*;
 import javax.ws.rs.core.Response;
+import java.util.*;
 
 /**
  * Created by Hamza on 08/09/19.
@@ -24,7 +27,7 @@ public class MyResource {
     @GET
     @Path("/calculate")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response.ResponseBuilder getTimeDifference(@QueryParam("hour1") int hour1,
+    public Response getTimeDifference(@QueryParam("hour1") int hour1,
                                                       @QueryParam("min1")  int min1,
                                                       @QueryParam("hour2") int hour2,
                                                       @QueryParam("min2") int min2)
@@ -85,15 +88,13 @@ public class MyResource {
 
         System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
 
-        JSONObject jsonObject = new JSONObject();
+        Map<String,Long> map= new HashMap<String,Long>();
+        map.put("Hours",hrDiff);
+        map.put("Mins",minDiff);
 
-        jsonObject.put("Hours",hrDiff);
-        jsonObject.put("Mins", minDiff);
+        return Response.status(Status.OK).entity(map).build();
 
-
-        return Response.status(200)
-                .entity(jsonObject);
-               // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
+       // return Response.status(200).entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)").build();
 
     }
     }
