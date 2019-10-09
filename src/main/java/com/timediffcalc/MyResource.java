@@ -24,7 +24,7 @@ public class MyResource {
     @GET
     @Path("/calculate")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response.ResponseBuilder getTimeDifference(@QueryParam("hour1") int hour1,
+    public Response getTimeDifference(@QueryParam("hour1") int hour1,
                                                       @QueryParam("min1")  int min1,
                                                       @QueryParam("hour2") int hour2,
                                                       @QueryParam("min2") int min2)
@@ -91,9 +91,10 @@ public class MyResource {
         jsonObject.put("Mins", minDiff);
 
 
-        return Response.status(200)
-                .entity(jsonObject);
-               // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
+        //return Response.status(200)
+          //      .entity(jsonObject).build();
+        return Response.ok(jsonObject, MediaType.APPLICATION_JSON).build();
+    // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
 
     }
     }
