@@ -15,10 +15,7 @@
 
     <div id="eresult" style="color:#ff2507;"></div>
     <script language="JavaScript" type = "text/javascript">
-    function showInput() {
-        document.getElementById('display').innerHTML =
-                    document.getElementById("user_input").value;
-    }
+
     // SELECTING ALL TEXT ELEMENTS
     var hour1 = document.forms['vform']['hour1'];
     var min1 = document.forms['vform']['min1'];
@@ -69,10 +66,15 @@
             min2.focus();
             return false;
          }
-          else
-            {
-               return  true;
-            }
+               var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("result").innerHTML =
+                  this.responseText;
+                }
+              };
+              xhttp.open("GET", "rest/diffcalc/calculate", true);
+              xhttp.send();
         }
 
 
@@ -80,8 +82,8 @@
   </script>
 </head>
 <body>
-    <form action="rest/diffcalc/calculate" method="get" onsubmit="return validation()" name="vform">
-        <div id="hour1_div">
+    <form method="get" onsubmit="return validation()" name="vform" class="form-control">
+        <div id="hour1_div" >
 <!--            <label>hour_one</label> <br>-->
                 Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
             <div id="hour1_Validation_error"></div>
@@ -103,9 +105,12 @@
             <div id="min2_Validation_error"></div>
         </div>
         <div>
-        <input type="submit" name="submit" value="Get The Difference"><br/>
+        <input type="submit" name="submit" value="Get The Difference" ><br/><br/>
         </div>
 
+        <div>
+           Result: <input type="text" name="result" id="result" >
+        </div>
         <p><span id='display'></span></p>
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

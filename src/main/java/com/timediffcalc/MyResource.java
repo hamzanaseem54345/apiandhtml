@@ -2,15 +2,12 @@ package com.timediffcalc;
 
 import javax.ws.rs.Path;
 
-//import org.json.JSONObject;
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 //import org.json.simple.JSONObject;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Response.*;
 import javax.ws.rs.core.Response;
-import java.util.*;
 
 /**
  * Created by Hamza on 08/09/19.
@@ -88,13 +85,16 @@ public class MyResource {
 
         System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
 
-        Map<String,Long> map= new HashMap<String,Long>();
-        map.put("Hours",hrDiff);
-        map.put("Mins",minDiff);
+        JSONObject jsonObject = new JSONObject();
 
-        return Response.status(Status.OK).entity(map).build();
+        jsonObject.put("Hours",hrDiff);
+        jsonObject.put("Mins", minDiff);
 
-       // return Response.status(200).entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)").build();
+
+        //return Response.status(200)
+          //      .entity(jsonObject).build();
+        return Response.ok(jsonObject, MediaType.APPLICATION_JSON).build();
+    // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
 
     }
     }
