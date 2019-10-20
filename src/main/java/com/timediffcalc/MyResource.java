@@ -83,7 +83,7 @@ public class MyResource {
             }
         }
 
-        System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
+       // System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
 
         JSONObject jsonObject = new JSONObject();
 
@@ -93,7 +93,11 @@ public class MyResource {
 
         //return Response.status(200)
           //      .entity(jsonObject).build();
-        return Response.ok(jsonObject, MediaType.APPLICATION_JSON).build();
+ //       System.out.println(jsonObject.toString());
+        Response response = Response.ok(jsonObject).build();
+        System.out.println(response.getEntity());
+        return response;
+
     // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
 
     }
