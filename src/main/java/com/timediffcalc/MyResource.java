@@ -83,22 +83,26 @@ public class MyResource {
             }
         }
 
-       // System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
+        //System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
 
-        JSONObject jsonObject = new JSONObject();
+        /*JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("Hours",hrDiff);
         jsonObject.put("Mins", minDiff);
 
 
-        //return Response.status(200)
-          //      .entity(jsonObject).build();
- //       System.out.println(jsonObject.toString());
+
+
+        //System.out.println(jsonObject.toString());
         Response response = Response.ok(jsonObject).build();
         System.out.println(response.getEntity());
-        return response;
+        return response;*/
 
-    // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
+        return Response
+                .status(200)
+                .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
+                .build();
+
 
     }
     }
