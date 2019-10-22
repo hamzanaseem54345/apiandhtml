@@ -42,7 +42,7 @@
             hour1_Validation_error.textContent = "Give the Hour in 24 hour Format";
             hour1.focus();
             return false;
-            }
+         }
 
          if((min1.value > 60 || min1.value < 0 || min1.value ===''){
             min1.style.border = "1px solid red";
@@ -67,7 +67,8 @@
             return false;
          }
                var xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
+              xhttp.onreadystatechange = function()
+              {
                 if (this.readyState == 4 && this.status == 200) {
                   document.getElementById("result").innerHTML =
                   this.responseText;
@@ -75,6 +76,7 @@
               };
               xhttp.open("GET", "rest/diffcalc/calculate", true);
               xhttp.send();
+        }
         }
 
 

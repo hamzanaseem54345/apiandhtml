@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30d4da44-3f07-4e3c-8398-5d65e9e222e1" name="Default Changelist" comment="first commit" />
+    <list default="true" id="30d4da44-3f07-4e3c-8398-5d65e9e222e1" name="Default Changelist" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Unknown.Tomcat 8.5.45560565646">
+  <component name="RunManager">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings>
