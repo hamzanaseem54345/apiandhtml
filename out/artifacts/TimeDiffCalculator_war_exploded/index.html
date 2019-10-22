@@ -14,127 +14,112 @@
     </p>
 
     <div id="eresult" style="color:#ff2507;"></div>
-
 </head>
 <body>
-    <form method="get" name="vform" class="form-control">
-        <div id="hour1_div" >
-<!--            <label>hour_one</label> <br>-->
-                Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
-            <div id="hour1_Validation_error"></div>
-        </div>
-        <div id="min1_div">
-<!--            <label>min_one</label> <br>-->
+<form method="get" onsubmit="return validation()" name="vform" class="form-control">
+    <div id="hour1_div" >
+        <!--            <label>hour_one</label> <br>-->
+        Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
+        <div id="hour1_Validation_error"></div>
+    </div>
+    <div id="min1_div">
+        <!--            <label>min_one</label> <br>-->
         Enter Initial Mins:<input type="text" name="min1" id="min1"/><br><br/>
-            <div id="min1_Validation_error"></div>
-        </div>
+        <div id="min1_Validation_error"></div>
+    </div>
 
-        <div id="hour2_div">
-<!--            <label>hour_two</label> <br>-->
+    <div id="hour2_div">
+        <!--            <label>hour_two</label> <br>-->
         Enter Final Hours:<input type="text" name="hour2" id="hour2"/><br><br/>
-            <div id="hour2_Validation_error"></div>
-        </div>
-        <div id="min2_div">
-<!--            <label>min_two</label> <br>-->
+        <div id="hour2_Validation_error"></div>
+    </div>
+    <div id="min2_div">
+        <!--            <label>min_two</label> <br>-->
         Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
-            <div id="min2_Validation_error"></div>
-        </div>
-        <div id="Difference">
-        <input type="submit" name="submit" value="Get The Difference" onsubmit="doTheCalculation()" ><br/><br/>
-        </div>
+        <div id="min2_Validation_error"></div>
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Get The Difference" ><br/><br/>
+    </div>
 
-        <!--<div>
-           Result: <input type="text" name="result" id="result" >
-        </div>-->
-<!--        <p><span id='display'></span></p>-->
-    </form>
+    <div>
+        Result: <textarea name="result" id="result" ></textarea>
+    </div>
+    <p><span id='display'></span></p>
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script language="JavaScript" type = "text/javascript">
 
-    <script language="JavaScript" type = "text/javascript">
+  // SELECTING ALL TEXT ELEMENTS
+  var hour1 = document.forms['vform']['hour1'];
+  var min1 = document.forms['vform']['min1'];
+  var hour2 = document.forms['vform']['hour2'];
+  var min2 = document.forms['vform']['min2'];
 
-        // SELECTING ALL TEXT ELEMENTS
-        var hour1 = document.forms['vform']['hour1'];
-        var min1 = document.forms['vform']['min1'];
-        var hour2 = document.forms['vform']['hour2'];
-        var min2 = document.forms['vform']['min2'];
-
-        // SELECTING ALL ERROR DISPLAY ELEMENTS
-        var hour1_Validation_error = document.getElementById('hour1_Validation_error');
-        var min1_Validation_error = document.getElementById('min1_Validation_error');
-        var hour2_Validation_error = document.getElementById('hour2_Validation_error');
-        var min2_Validation_error = document.getElementById('min2_Validation_error')
+  // SELECTING ALL ERROR DISPLAY ELEMENTS
+  var hour1_Validation_error = document.getElementById('hour1_Validation_error');
+  var min1_Validation_error = document.getElementById('min1_Validation_error');
+  var hour2_Validation_error = document.getElementById('hour2_Validation_error');
+  var min2_Validation_error = document.getElementById('min2_Validation_error')
 
 
-        // SETTING ALL EVENT LISTENERS
+  // SETTING ALL EVENT LISTENERS
+  hour1.addEventListener('blur', hour1_Validation_error, true);
+  min1.addEventListener('blur', min1_Validation_error, true);
+  hour2.addEventListener('blur', hour2_Validation_error, true);
+  min2.addEventListener('blur', min2_Validation_error, true);
 
-        hour1.addEventListener('blur', hour1_Validation_error, true);
-        min1.addEventListener('blur', min1_Validation_error, true);
-        hour2.addEventListener('blur',hour2_Validation_error, true);
-        min2.addEventListener('blur', min2_Validation_error, true);
+      function validation() {
 
-        function validation() {
+       if(hour1.value > 23 || hour1.value < 0 || hour1.value ===''){
+          hour1.style.border = "1px solid red";
+          document.getElementById('hour1_div').style.color = "red";
+          hour1_Validation_error.textContent = "Give the Hour in 24 hour Format";
+          hour1.focus();
+          return false;
+       }
 
-            if(hour1.value > 23 || hour1.value < 0 || hour1.value ===''){
-                hour1.style.border = "1px solid red";
-                document.getElementById('hour1_div').style.color = "red";
-                hour1_Validation_error.textContent = "Give the Hour in 24 hour Format";
-                hour1.focus();
-                return false;
-            }
+       if(min1.value > 60 || min1.value < 0 || min1.value ===''){
+          min1.style.border = "1px solid red";
+          document.getElementById('min1_div').style.color = "red";
+          min1_Validation_error.textContent = "Give the min in the correct format";
+          min1.focus();
+          return false;
+       }
 
-            if((min1.value > 60 || min1.value < 0 || min1.value ==='')){
-                min1.style.border = "1px solid red";
-                document.getElementById('min1_div').style.color = "red";
-                min1_Validation_error.textContent = "Give the min in the correct format";
-                min1.focus();
-                return false;
-            }
-
-            if(hour2.value > 23 || hour2.value < 0 || hour2.value ===''){
-                hour2.style.border = "1px solid red";
-                document.getElementById('hour2_div').style.color = "red";
-                hour2_Validation_error.textContent = "Give the Hour in 24 hour Format";
-                hour2.focus();
-                return false;
-            }
-            if(min2.value > 60 || min2.value < 0 || min2.value ===''){
-                min2.style.border = "1px solid red";
-                document.getElementById('min2_div').style.color = "red";
-                min2_Validation_error.textContent = "Give the min in the correct format";
-                min2.focus();
-                return false;
-            }
-
-        }
-
-    </script>
-    <script>
-        function doTheCalculation() {
-            var xhttp;
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState === 4) {
-                    if (this.status === 200) {
-                        console.log("Entered this fucntion")
-                        var response = JSON.parse(xhttp.responseText);
-                        console.log(response);
-                        var dataFrame = response.dataFrame;
-                        console.log(dataFrame)
-                        document.getElementById("Difference").innerHTML =
-                            response.dataFrame;
-
-                    }
-                }
+       if(hour2.value > 23 || hour2.value < 0 || hour2.value ===''){
+          hour2.style.border = "1px solid red";
+          document.getElementById('hour2_div').style.color = "red";
+          hour2_Validation_error.textContent = "Give the Hour in 24 hour Format";
+          hour2.focus();
+          return false;
+          }
+       if(min2.value > 60 || min2.value < 0 || min2.value ===''){
+          min2.style.border = "1px solid red";
+          document.getElementById('min2_div').style.color = "red";
+          min2_Validation_error.textContent = "Give the min in the correct format";
+          min2.focus();
+          return false;
+       }
+          var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function()
+            {
+              if (this.readyState == 4 && this.status == 200)
+              {
+                document.getElementById("result").innerHTML =
+                this.responseText;
+              }
             };
             xhttp.open("GET", "rest/diffcalc/calculate", true);
-            xhttp.setRequestHeader("Content-type", "application/json");
-            // xhttp.setRequestHeader("Authorization", "Basic a2VybmVsc==");
-            xhttp.send();
-        }
+          xhttp.send();
+      }
 
-    </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+
+
+
+</script>
 
 </html>
