@@ -9,7 +9,6 @@
     <list default="true" id="30d4da44-3f07-4e3c-8398-5d65e9e222e1" name="Default Changelist" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,12 +64,6 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
   </component>
   <component name="ProjectId" id="1Rh8xSJsBnCnQHqQq36eOV4gWTC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
