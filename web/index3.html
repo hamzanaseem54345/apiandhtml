@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>TimeDiffCalc</title>
+</head>
+
+<body>
+<p>
+<center>
+    <h3>Time Duration Calculator 24 hour clock - How many hours and minutes between two times</h3>
+</center>
+</p>
+<div id="hour1_div" >
+    <!--            <label>hour_one</label> <br>-->
+    Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
+
+</div>
+<div id="min1_div">
+    <!--            <label>min_one</label> <br>-->
+    Enter Initial Mins:<input type="text" name="min1" id="min1"/><br><br/>
+
+</div>
+
+<div id="hour2_div">
+    <!--            <label>hour_two</label> <br>-->
+    Enter Final Hours:<input type="text" name="hour2" id="hour2"/><br><br/>
+
+</div>
+<div id="min2_div">
+    <!--            <label>min_two</label> <br>-->
+    Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
+
+</div>
+<button id="mybtn"> fetch it </button>
+<div id="info">
+
+</div>
+
+<script  language="JavaScript" type = "text/javascript">
+
+    document.getElementById("mybtn").onclick = ()=>{
+
+        let h1=document.getElementById(hour1);
+        let m1=document.getElementById(min1);
+        let h2=document.getElementById(hour2);
+        let m2=document.getElementById(min2);
+
+        let params ={
+            "hour1":h1,
+            "min1":m1,
+            "hour2":h2,
+            "min2":m2
+        }
+
+        let query = Object.keys(params)
+            .map(k => encodeURIComponent(k)+ '=' + encodeURIComponent(params[k]))
+            .join('&');
+
+        let url = 'http://localhost:8084/TimeDiffCalculator_war_exploded/rest/diffcalc/calculate?'+query
+        fetch(url)
+            .then(data => {
+                return data.json()
+            }).then(data2 => {
+            console.log(data2.Hours) // Prints result from `response.json()` in getRequest
+            document.getElementById("info").innerHTML=`
+                 <ul>
+                   <li>Difference in Hours :${data2.Hours}</li>
+                   <li>Difference in Mins :${data2.Mins}</li>
+                 </ul>`
+
+        })
+        // Create and append the li's to the ul
+
+
+    }
+
+
+</script>
+</body>
+</html>
