@@ -8,6 +8,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Hamza on 08/09/19.
@@ -83,22 +87,37 @@ public class MyResource {
             }
         }
 
-       // System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
+        //System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
 
-        JSONObject jsonObject = new JSONObject();
+        /*JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("Hours",hrDiff);
         jsonObject.put("Mins", minDiff);
 
 
-        //return Response.status(200)
-          //      .entity(jsonObject).build();
- //       System.out.println(jsonObject.toString());
+
+
+        //System.out.println(jsonObject.toString());
         Response response = Response.ok(jsonObject).build();
         System.out.println(response.getEntity());
-        return response;
+        return response;*/
 
-    // .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
+
+        Map<String, Long> map= new HashMap<String, Long>();
+
+        map.put("Hours", hrDiff);
+        map.put("Mins", minDiff);
+
+        JSONObject obj = new JSONObject(map);
+
+        return Response.status(200).entity(obj).header("Access-Control-Allow-Origin","*").header("Access-Control-Allow-Credentials", true).build();
+
+
+        /*return Response
+                .status(200)
+                .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
+                .build();*/
+
 
     }
     }
