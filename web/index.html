@@ -6,79 +6,124 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>TimeDiffCalc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Niconne|Song+Myung&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <p>
 <center>
-    <h3>Time Duration Calculator 24 hour clock - How many hours and minutes between two timestamp</h3>
+    <h3></h3>
 </center>
-</p>
-<div id="hour1_div" >
-    <!--            <label>hour_one</label> <br>-->
-    Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
-
+<div class="top-container">
+    <h2>Time Duration Calculator 24 hour clock - How many hours and minutes between two timestamp?</h2>
+    <img class="clock" src="images\clock2.jpg" alt="">
 </div>
-<div id="min1_div">
-    <!--            <label>min_one</label> <br>-->
-    Enter Initial Mins:<input type="text" name="min1" id="min1"/><br><br/>
+<div class="middle-container">
+    <div class="profile">
+        <img src="images\image.png" alt="">
+        <h2></h2>
+        <p class="mydesc" ></p>
+    </div>
+    </p>
+    <form class= "form" id="myForm" class="form-control">
+        <div id="hour1_div" >
+            <!--            <label>hour_one</label> <br>-->
+            Enter Initial Hours:<input type="text" name="hour1" placeholder= "Intial Hour" id="hour1"/><br><br/>
 
+        </div>
+        <div id="min1_div">
+            <!--            <label>min_one</label> <br>-->
+            Enter Initial Mins:<input type="text" name="min1" placeholder= "Initial Minute" id="min1"/><br><br/>
+
+        </div>
+
+        <div id="hour2_div">
+            <!--            <label>hour_two</label> <br>-->
+            Enter Final Hours:<input type="text" name="hour2" placeholder="Final Hour" id="hour2"/><br><br/>
+
+        </div>
+        <div id="min2_div">
+            <!--            <label>min_two</label> <br>-->
+            Enter Final Mins:<input type="text" name="min2" placeholder="Final Minute" id="min2"/><br><br/>
+
+        </div>
+        <div>
+            <button type ="submit" id="mybtn"> Get the Difference </button>
+        </div>
+    </form>
+
+    <div id="info">
+
+    </div>
+    <hr>
+    <div class="skills">
+        <h2></h2>
+        <div class="skill-row">
+            <img class="code-image" src="css\images\coding.png" alt="">
+            <h3></h3>
+            <p></p>
+        </div>
+        <div class="skill-row">
+            <img class="computer-image" src="css\images\devices.png" alt="">
+            <h3></h3>
+            <p></p>
+        </div>
+    </div>
+    <hr>
+    <div class="contact-me">
+        <h2>Get In Touch</h2>
+        <h3>For the API and JavaScript Codes </h3>
+        <p cont-desc>just say HI!</p>
+        <a class="btn" href="mailto:hamza_nasim@@live.com">CONTACT ME</a>
+    </div>
+</div>
+<div class="bottom-container">
+    <a class="footer-link" href="https://www.linkedin.com/in/hamza-naseem-4a1067a3/">LinkedIn</a>
+    <a class="footer-link" href="https://github.com/h54345/">GitHub</a>
+    <p class="copyright" >© 2019 Hamza Naseem Khan.</p>
 </div>
 
-<div id="hour2_div">
-    <!--            <label>hour_two</label> <br>-->
-    Enter Final Hours:<input type="text" name="hour2" id="hour2"/><br><br/>
-
-</div>
-<div id="min2_div">
-    <!--            <label>min_two</label> <br>-->
-    Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
-
-</div>
-<button id="mybtn"> fetch it </button>
-<div id="info">
-
-</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 
 <script  language="JavaScript" type = "text/javascript">
 
-    document.getElementById("mybtn").onclick = ()=>{
 
-        let h1=document.getElementById("hour1").value;
-        let m1=document.getElementById("min1").value;
-        let h2=document.getElementById("hour2").value;
-        let m2=document.getElementById("min2").value;
+    const myForm = document.getElementById('myForm');
 
-        let params ={
-            "hour1":h1,
-            "min1":m1,
-            "hour2":h2,
-            "min2":m2
-        }
+    myForm.addEventListener('submit', function(e){
 
-        let query = Object.keys(params)
-            .map(k => encodeURIComponent(k)+ '=' + encodeURIComponent(params[k]))
-            .join('&');
+        e.preventDefault();
 
-        let url = 'http://localhost:8084/TimeDiffCalculator_war_exploded/rest/diffcalc/calculate?'+query
+        const formData = new FormData(myForm);
+
+
+        const params = new URLSearchParams(formData);
+        console.log(params)
+        console.log(params.toString())
+        let url = `http://localhost:8084/TimeDiffCalculator_war_exploded/rest/diffcalc/calculate?${ params.toString()}`
         fetch(url)
             .then(data => {
                 return data.json()
             }).then(data2 => {
             console.log(data2.Hours) // Prints result from `response.json()` in getRequest
-            document.getElementById("info").innerHTML=`
+            console.log(data2.Mins)  // Prints result from `response.json()` in getRequest
+            document.getElementById("info").innerHTML=
+                `
                  <ul>
                    <li>Difference in Hours :${data2.Hours}</li>
                    <li>Difference in Mins :${data2.Mins}</li>
-                 </ul>`
+                 </ul>
+
+            `
 
         })
-        // Create and append the li's to the ul
 
-
-    }
-
-
+    })
 </script>
-</body>
+
 </html>
