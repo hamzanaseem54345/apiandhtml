@@ -7,21 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30d4da44-3f07-4e3c-8398-5d65e9e222e1" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/web/images/chillies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/clock2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/code.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/coding.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/computer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/devices.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/mountain.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/web/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +41,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="302">
+              <caret line="68" column="80" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -65,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2490">
+            <state relative-caret-position="153">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
@@ -196,6 +193,7 @@
     <panes>
       <pane id="CatdeaLogs" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,16 +201,10 @@
               <item name="TimeDiffCalculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="TimeDiffCalculator" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TimeDiffCalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TimeDiffCalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -576,7 +568,10 @@
       <workItem from="1572893972037" duration="2371000" />
       <workItem from="1572897155925" duration="526000" />
       <workItem from="1572897761283" duration="2862000" />
-      <workItem from="1573312441261" duration="6206000" />
+      <workItem from="1573312441261" duration="6731000" />
+      <workItem from="1573911534147" duration="1358000" />
+      <workItem from="1589819721281" duration="850000" />
+      <workItem from="1592195988160" duration="204000" />
     </task>
     <servers />
   </component>
@@ -586,13 +581,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60886000" />
+    <option name="totallyTimeSpent" value="63854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49878347" visible="true" weight="0.2647504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49878347" visible="true" weight="0.27155825" />
       <window_info id="Structure" order="1" sideWeight="0.50121653" side_tool="true" weight="0.25340393" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -602,7 +596,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37908497" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37908497" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -618,7 +612,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.20574887" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -703,13 +697,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/index3.html" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/artifacts/TimeDiffCalculator_war_exploded.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -766,6 +753,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="68" column="80" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -776,17 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/style.css">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2490">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="196">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
         </state>
       </provider>
     </entry>
