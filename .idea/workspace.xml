@@ -5,12 +5,36 @@
       <artifact name="TimeDiffCalculator:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/improvements" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="30d4da44-3f07-4e3c-8398-5d65e9e222e1" name="Default Changelist" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,13 +57,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="autoscrollToSource" value="true" />
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="TimeDiffCalculator" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -49,7 +66,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="improvements" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -61,38 +89,131 @@
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
   <component name="ProjectId" id="1Rh8xSJsBnCnQHqQq36eOV4gWTC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/gitCodes/myPractiseCodes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.29770115" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hamza\IdeaProjects\TimeDiffCalculator\web\images" />
+      <recent name="C:\Users\Hamza\IdeaProjects\TimeDiffCalculator\out\artifacts\TimeDiffCalculator_war_exploded\WEB-INF\lib" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.27">
+    <configuration name="All in TimeDiffCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TimeDiffCalculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="TimeDiffCalculator:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/TimeDiffCalculator_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_TimeDiffCalculator_2" />
+        <option name="HTTP_PORT" value="8084" />
+      </server-settings>
+      <log_file alias="Tomcat Localhost Access Log" path="%IDEA_RUN:CATALINA_BASE%/logs/localhost_access_log.*" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file enabled="true" id="Tomcat Manager" />
+      <predefined_log_file enabled="true" id="Tomcat Host Manager" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56631" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="TimeDiffCalculator:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings>
@@ -155,8 +276,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
+    <configuration name="index.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/index.html" />
       <deployment>
         <artifact name="TimeDiffCalculator:war exploded">
           <settings>
@@ -165,7 +286,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_TimeDiffCalculator_2" />
+        <option name="BASE_DIRECTORY_NAME" value="_TimeDiffCalculator" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -299,16 +420,18 @@
         </option>
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
+    <list>
+      <item itemvalue="JUnit.All in TimeDiffCalculator" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.27" />
+      <item itemvalue="Tomcat Server.index.jsp" />
+      <item itemvalue="Tomcat Server.index.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in TimeDiffCalculator" />
+        <item itemvalue="Tomcat Server.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -323,14 +446,27 @@
       <workItem from="1567789864918" duration="9253000" />
       <workItem from="1567839870789" duration="15093000" />
       <workItem from="1570442471979" duration="444000" />
+      <workItem from="1571941294950" duration="24107000" />
+      <workItem from="1572893972037" duration="2371000" />
+      <workItem from="1572897155925" duration="526000" />
+      <workItem from="1572897761283" duration="2862000" />
+      <workItem from="1573312441261" duration="6731000" />
+      <workItem from="1573911534147" duration="1358000" />
+      <workItem from="1589819721281" duration="850000" />
+      <workItem from="1592195988160" duration="204000" />
+      <workItem from="1592377928567" duration="3292000" />
+      <workItem from="1592381459589" duration="2285000" />
+      <workItem from="1592477478153" duration="18842000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24790000" />
+  <component name="TestHistory">
+    <history-entry file="All_in_TimeDiffCalculator - 2019.11.05 at 01h 35m 49s.xml">
+      <configuration name="All in TimeDiffCalculator" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -338,7 +474,17 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/improvements" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -358,84 +504,148 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>TimeDiffCalculator:war exploded</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: javax.annotation:javax.annotation-api:1.2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="436" y="185" key="#Web_Browsers" timestamp="1592378036973">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="436" y="185" key="#Web_Browsers/0.0.1280.800@0.0.1280.800" timestamp="1592378036973" />
+    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592507357521">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1592507357521" />
+    <state x="373" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592506230703">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="373" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1592506230703" />
+    <state x="427" y="112" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1592500121730">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="427" y="112" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.800@0.0.1280.800" timestamp="1592500121730" />
+    <state x="399" y="184" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592502197456">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="399" y="184" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.800@0.0.1280.800" timestamp="1592502197456" />
+    <state width="1065" height="273" key="GridCell.Tab.0.bottom" timestamp="1592509130416">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592509130416" />
+    <state width="1065" height="273" key="GridCell.Tab.0.center" timestamp="1592509130415">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1592509130415" />
+    <state width="1065" height="273" key="GridCell.Tab.0.left" timestamp="1592509130412">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1592509130412" />
+    <state width="1065" height="273" key="GridCell.Tab.0.right" timestamp="1592509130416">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1592509130416" />
+    <state width="1065" height="273" key="GridCell.Tab.1.bottom" timestamp="1592509130418">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592509130418" />
+    <state width="1065" height="273" key="GridCell.Tab.1.center" timestamp="1592509130417">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1592509130417" />
+    <state width="1065" height="273" key="GridCell.Tab.1.left" timestamp="1592509130417">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1592509130417" />
+    <state width="1065" height="273" key="GridCell.Tab.1.right" timestamp="1592509130418">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1592509130418" />
+    <state width="1065" height="273" key="GridCell.Tab.2.bottom" timestamp="1592509130420">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.2.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592509130420" />
+    <state width="1065" height="273" key="GridCell.Tab.2.center" timestamp="1592509130419">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.2.center/0.0.1280.800@0.0.1280.800" timestamp="1592509130419" />
+    <state width="1065" height="273" key="GridCell.Tab.2.left" timestamp="1592509130419">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.2.left/0.0.1280.800@0.0.1280.800" timestamp="1592509130419" />
+    <state width="1065" height="273" key="GridCell.Tab.2.right" timestamp="1592509130420">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.2.right/0.0.1280.800@0.0.1280.800" timestamp="1592509130420" />
+    <state width="1065" height="273" key="GridCell.Tab.3.bottom" timestamp="1592509130422">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.3.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592509130422" />
+    <state width="1065" height="273" key="GridCell.Tab.3.center" timestamp="1592509130421">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.3.center/0.0.1280.800@0.0.1280.800" timestamp="1592509130421" />
+    <state width="1065" height="273" key="GridCell.Tab.3.left" timestamp="1592509130420">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.3.left/0.0.1280.800@0.0.1280.800" timestamp="1592509130420" />
+    <state width="1065" height="273" key="GridCell.Tab.3.right" timestamp="1592509130422">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.3.right/0.0.1280.800@0.0.1280.800" timestamp="1592509130422" />
+    <state width="1065" height="273" key="GridCell.Tab.4.bottom" timestamp="1592509130424">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.4.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592509130424" />
+    <state width="1065" height="273" key="GridCell.Tab.4.center" timestamp="1592509130423">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.4.center/0.0.1280.800@0.0.1280.800" timestamp="1592509130423" />
+    <state width="1065" height="273" key="GridCell.Tab.4.left" timestamp="1592509130422">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.4.left/0.0.1280.800@0.0.1280.800" timestamp="1592509130422" />
+    <state width="1065" height="273" key="GridCell.Tab.4.right" timestamp="1592509130423">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.4.right/0.0.1280.800@0.0.1280.800" timestamp="1592509130423" />
+    <state width="1065" height="273" key="GridCell.Tab.5.bottom" timestamp="1592509130425">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.5.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592509130425" />
+    <state width="1065" height="273" key="GridCell.Tab.5.center" timestamp="1592509130424">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.5.center/0.0.1280.800@0.0.1280.800" timestamp="1592509130424" />
+    <state width="1065" height="273" key="GridCell.Tab.5.left" timestamp="1592509130424">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.5.left/0.0.1280.800@0.0.1280.800" timestamp="1592509130424" />
+    <state width="1065" height="273" key="GridCell.Tab.5.right" timestamp="1592509130425">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1065" height="273" key="GridCell.Tab.5.right/0.0.1280.800@0.0.1280.800" timestamp="1592509130425" />
+    <state x="149" y="23" width="1094" height="728" key="SettingsEditor" timestamp="1592509033117">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="149" y="23" width="1094" height="728" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1592509033117" />
+    <state x="341" y="32" width="930" height="735" key="find.popup" timestamp="1592507314821">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="341" y="32" width="930" height="735" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1592507314821" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1592545189073">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1592545189073" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TimeDiffCalculator$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1572896095730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

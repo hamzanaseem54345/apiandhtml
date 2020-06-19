@@ -7,119 +7,123 @@
 
     <title>TimeDiffCalc</title>
     <link rel="stylesheet" href="style.css">
-    <p>
-    <center>
-        <h3>Time Duration Calculator 24 hour clock - How many hours and minutes between two times</h3>
-    </center>
-    </p>
-
-    <div id="eresult" style="color:#ff2507;"></div>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Niconne|Song+Myung&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<form method="get" onsubmit="return validation()" name="vform" class="form-control">
-    <div id="hour1_div" >
-        <!--            <label>hour_one</label> <br>-->
-        Enter Initial Hours:<input type="text" name="hour1" id="hour1"/><br><br/>
-        <div id="hour1_Validation_error"></div>
+<p>
+<center>
+    <h3></h3>
+</center>
+<div class="top-container">
+    <h2>Time Duration Calculator 24 hour clock - How many hours and minutes between two timestamp?</h2>
+    <img class="clock" src="images\clock2.jpg" alt="">
+</div>
+<div class="middle-container">
+    <div class="profile">
+        <img src="images\image.png" alt="">
+        <h2></h2>
+        <p class="mydesc" ></p>
     </div>
-    <div id="min1_div">
-        <!--            <label>min_one</label> <br>-->
-        Enter Initial Mins:<input type="text" name="min1" id="min1"/><br><br/>
-        <div id="min1_Validation_error"></div>
-    </div>
+    </p>
+    <form class= "form" id="myForm" class="form-control">
+        <div id="hour1_div" >
+            <!--            <label>hour_one</label> <br>-->
+            Enter Initial Hours:<input type="text" name="hour1" placeholder= "Intial Hour" id="hour1"/><br><br/>
 
-    <div id="hour2_div">
-        <!--            <label>hour_two</label> <br>-->
-        Enter Final Hours:<input type="text" name="hour2" id="hour2"/><br><br/>
-        <div id="hour2_Validation_error"></div>
-    </div>
-    <div id="min2_div">
-        <!--            <label>min_two</label> <br>-->
-        Enter Final Mins:<input type="text" name="min2" id="min2"/><br><br/>
-        <div id="min2_Validation_error"></div>
-    </div>
-    <div>
-        <input type="submit" name="submit" value="Get The Difference" ><br/><br/>
-    </div>
+        </div>
+        <div id="min1_div">
+            <!--            <label>min_one</label> <br>-->
+            Enter Initial Mins:<input type="text" name="min1" placeholder= "Initial Minute" id="min1"/><br><br/>
 
-    <div>
-        Result: <textarea name="result" id="result" ></textarea>
-    </div>
+        </div>
 
-</form>
+        <div id="hour2_div">
+            <!--            <label>hour_two</label> <br>-->
+            Enter Final Hours:<input type="text" name="hour2" placeholder="Final Hour" id="hour2"/><br><br/>
+
+        </div>
+        <div id="min2_div">
+            <!--            <label>min_two</label> <br>-->
+            Enter Final Mins:<input type="text" name="min2" placeholder="Final Minute" id="min2"/><br><br/>
+
+        </div>
+        <div>
+            <button type ="submit" id="mybtn"> Get the Difference </button>
+        </div>
+    </form>
+
+    <div id="info">
+
+    </div>
+    <hr>
+    <div class="skills">
+        <h2></h2>
+        <div class="skill-row">
+            <img class="code-image" src="css\images\coding.png" alt="">
+            <h3></h3>
+            <p></p>
+        </div>
+        <div class="skill-row">
+<!--            <img class="computer-image" src="css\images\devices.png" alt="">-->
+            <h3></h3>
+            <p></p>
+        </div>
+    </div>
+    <hr>
+    <div class="contact-me">
+        <h2>Get In Touch</h2>
+        <h3>For the API and JavaScript Codes </h3>
+        <p cont-desc>just say HI!</p>
+        <a class="btn" href="mailto:hamza_nasim@@live.com">CONTACT ME</a>
+    </div>
+</div>
+<div class="bottom-container">
+    <a class="footer-link" href="https://www.linkedin.com/in/hamza-naseem-4a1067a3/">LinkedIn</a>
+    <a class="footer-link" href="https://github.com/h54345/">GitHub</a>
+    <p class="copyright" >© 2019 Hamza Naseem Khan.</p>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-<script language="JavaScript" type = "text/javascript">
 
-  // SELECTING ALL TEXT ELEMENTS
-  var hour1 = document.forms['vform']['hour1'];
-  var min1 = document.forms['vform']['min1'];
-  var hour2 = document.forms['vform']['hour2'];
-  var min2 = document.forms['vform']['min2'];
-
-  // SELECTING ALL ERROR DISPLAY ELEMENTS
-  var hour1_Validation_error = document.getElementById('hour1_Validation_error');
-  var min1_Validation_error = document.getElementById('min1_Validation_error');
-  var hour2_Validation_error = document.getElementById('hour2_Validation_error');
-  var min2_Validation_error = document.getElementById('min2_Validation_error')
+<script  language="JavaScript" type = "text/javascript">
 
 
-  // SETTING ALL EVENT LISTENERS
-  hour1.addEventListener('blur', hour1_Validation_error, true);
-  min1.addEventListener('blur', min1_Validation_error, true);
-  hour2.addEventListener('blur', hour2_Validation_error, true);
-  min2.addEventListener('blur', min2_Validation_error, true);
+    const myForm = document.getElementById('myForm');
 
-      function validation() {
+    myForm.addEventListener('submit', function(e){
 
-       if(hour1.value > 23 || hour1.value < 0 || hour1.value ===''){
-          hour1.style.border = "1px solid red";
-          document.getElementById('hour1_div').style.color = "red";
-          hour1_Validation_error.textContent = "Give the Hour in 24 hour Format";
-          hour1.focus();
-          return false;
-       }
+        e.preventDefault();
 
-       if(min1.value > 60 || min1.value < 0 || min1.value ===''){
-          min1.style.border = "1px solid red";
-          document.getElementById('min1_div').style.color = "red";
-          min1_Validation_error.textContent = "Give the min in the correct format";
-          min1.focus();
-          return false;
-       }
-
-       if(hour2.value > 23 || hour2.value < 0 || hour2.value ===''){
-          hour2.style.border = "1px solid red";
-          document.getElementById('hour2_div').style.color = "red";
-          hour2_Validation_error.textContent = "Give the Hour in 24 hour Format";
-          hour2.focus();
-          return false;
-          }
-       if(min2.value > 60 || min2.value < 0 || min2.value ===''){
-          min2.style.border = "1px solid red";
-          document.getElementById('min2_div').style.color = "red";
-          min2_Validation_error.textContent = "Give the min in the correct format";
-          min2.focus();
-          return false;
-       }
-          var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function()
-            {
-              if (this.readyState == 4 && this.status == 200)
-              {
-                document.getElementById("result").innerHTML =
-                this.responseText;
-              }
-            };
-            xhttp.open("GET", "http://localhost:8084/TimeDiffCalculator_war_exploded/rest/diffcalc/calculate", true);
-          xhttp.send(null);
-      }
+        const formData = new FormData(myForm);
 
 
+        const params = new URLSearchParams(formData);
+        console.log(params)
+        console.log(params.toString())
+        let url = `http://localhost:8084/TimeDiffCalculator_war_exploded/rest/diffcalc/calculate?${ params.toString()}`
+        fetch(url)
+            .then(data => {
+                return data.json()
+            }).then(data2 => {
+            console.log(data2.Hours) // Prints result from `response.json()` in getRequest
+            console.log(data2.Mins)  // Prints result from `response.json()` in getRequest
+            document.getElementById("info").innerHTML=
+                `
+                 <ul>
+                   <li>Difference in Hours :${data2.Hours}</li>
+                   <li>Difference in Mins :${data2.Mins}</li>
+                 </ul>
 
+            `
 
+        })
+
+    })
 </script>
 
 </html>
