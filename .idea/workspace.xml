@@ -33,6 +33,10 @@
   <component name="ChangeListManager">
     <list default="true" id="30d4da44-3f07-4e3c-8398-5d65e9e222e1" name="Default Changelist" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TimeDiffCalculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/TimeDiffCalculator-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -455,7 +459,7 @@
       <workItem from="1592195988160" duration="204000" />
       <workItem from="1592377928567" duration="3292000" />
       <workItem from="1592381459589" duration="2285000" />
-      <workItem from="1592477478153" duration="11081000" />
+      <workItem from="1592477478153" duration="12966000" />
     </task>
     <servers />
   </component>

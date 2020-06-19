@@ -105,7 +105,7 @@
         const params = new URLSearchParams(formData);
         console.log(params)
         console.log(params.toString())
-        let url = `https://immense-peak-41929.herokuapp.com/TimeDiffCalculator_war_exploded/rest/diffcalc/calculate?${ params.toString()}`
+        let url = `http://localhost:8084/TimeDiffCalculator_war_exploded/rest/diffcalc/calculate?${ params.toString()}`
         fetch(url)
             .then(data => {
                 return data.json()
