@@ -32,10 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30d4da44-3f07-4e3c-8398-5d65e9e222e1" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/WEB-INF/classes/com/timediffcalc/JsonMessageBodyWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/WEB-INF/classes/com/timediffcalc/JsonMessageBodyWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/WEB-INF/classes/com/timediffcalc/MyResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TimeDiffCalculator_war_exploded/WEB-INF/classes/com/timediffcalc/MyResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TimeDiffCalculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TimeDiffCalculator.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Main/webapp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -130,6 +127,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/Main/webapp" />
       <recent name="C:\Users\Hamza\IdeaProjects\TimeDiffCalculator\web\images" />
       <recent name="C:\Users\Hamza\IdeaProjects\TimeDiffCalculator\out\artifacts\TimeDiffCalculator_war_exploded\WEB-INF\lib" />
     </key>
@@ -458,7 +457,7 @@
       <workItem from="1592195988160" duration="204000" />
       <workItem from="1592377928567" duration="3292000" />
       <workItem from="1592381459589" duration="2285000" />
-      <workItem from="1592477478153" duration="21633000" />
+      <workItem from="1592477478153" duration="21913000" />
     </task>
     <servers />
   </component>
