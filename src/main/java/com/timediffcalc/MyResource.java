@@ -30,11 +30,10 @@ public class MyResource {
     @GET
     @Path("/calculate")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getTimeDifference(@NotNull  @Pattern(regexp = "\\d+") @QueryParam("hour1")  int hour1,
-                                      @NotNull  @Pattern(regexp = "\\d+") @QueryParam("min1")int min1,
-                                      @NotNull @Pattern(regexp = "\\d+")  @QueryParam("hour2") int hour2,
-                                      @NotNull @Pattern(regexp = "\\d+")  @QueryParam("min2") int min2)
-    {
+    public Response getTimeDifference(@NotNull @Pattern(regexp = "\\d+") @QueryParam("hour1") int hour1,
+                                      @NotNull @Pattern(regexp = "\\d+") @QueryParam("min1") int min1,
+                                      @NotNull @Pattern(regexp = "\\d+") @QueryParam("hour2") int hour2,
+                                      @NotNull @Pattern(regexp = "\\d+") @QueryParam("min2") int min2) {
 
         long minDiff = 0;
         long hrDiff = 0;
@@ -46,12 +45,9 @@ public class MyResource {
             minDiff = Math.abs(min1 - min2);
             hrDiff = Math.abs(hour1 - hour2);
 
-            if (hour2 > hour1)
-            {
-                hrDiff = Math.abs(hour1 - hour2) ;
-            }
-            else if(hour1>hour2)
-            {
+            if (hour2 > hour1) {
+                hrDiff = Math.abs(hour1 - hour2);
+            } else if (hour1 > hour2) {
                 hrDiff = 24 - Math.abs(hour1 - hour2) - 1;
             }
 
@@ -64,34 +60,30 @@ public class MyResource {
                     minDiff = 60 - minDiff;
 
                     if (hour2 > hour1)
-                        hrDiff = Math.abs(hour1 - hour2)-1;
-                    else if(hour1> hour2)
-                    {
+                        hrDiff = Math.abs(hour1 - hour2) - 1;
+                    else if (hour1 > hour2) {
                         hrDiff = 24 - Math.abs(hour1 - hour2) - 1;
-                    }
-                    else {
+                    } else {
                         hrDiff = 24 - hrDiff - 1;
                     }
                 }
             }
 
-        }
-        else if(min1==min2)
-        {
-            if(hour1>hour2){
-                hrDiff=Math.abs((hour1-hour2)-24);
+        } else if (min1 == min2) {
+            if (hour1 > hour2) {
+                hrDiff = Math.abs((hour1 - hour2) - 24);
             }
             /*else if (hour1<hour2){
                         hrDiff=Math.abs((hour1-hour2)-24);
                 }*/
-        }
-        else {
+        } else {
             hrDiff = Math.abs(hour1 - hour2);
             if (hrDiff == 0) {
                 hrDiff = hrDiff + 24;
             }
 
         }
+
 
         //System.out.println("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)");
 
@@ -108,22 +100,33 @@ public class MyResource {
         System.out.println(response.getEntity());
         return response;*/
 
+        Map<String, Long> map = new HashMap<String, Long>();
+        if (hrDiff == 0 && minDiff == 0) {
 
-        Map<String, Long> map= new HashMap<String, Long>();
+            map.put("Hours", 24L);
+            map.put("Mins", 0L);
 
-        map.put("Hours", hrDiff);
-        map.put("Mins", minDiff);
+            JSONObject obj = new JSONObject(map);
 
-        JSONObject obj = new JSONObject(map);
+            return Response.status(200).entity(obj).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Credentials", true).build();
 
-        return Response.status(200).entity(obj).header("Access-Control-Allow-Origin","*").header("Access-Control-Allow-Credentials", true).build();
-
-
+        }
         /*return Response
                 .status(200)
                 .entity("Calculated Time Difference: "+hrDiff + " hr(s) & " + minDiff + " min(s)")
                 .build();*/
+        else {
+
+            map.put("Hours", hrDiff);
+            map.put("Mins", minDiff);
+
+            JSONObject obj = new JSONObject(map);
+
+            return Response.status(200).entity(obj).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Credentials", true).build();
+
+        }
 
 
     }
-    }
+}
+
