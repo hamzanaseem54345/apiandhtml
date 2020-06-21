@@ -1,5 +1,7 @@
 package com.timediffcalc;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.ws.rs.Path;
 
 import org.json.JSONObject;
@@ -28,11 +30,12 @@ public class MyResource {
     @GET
     @Path("/calculate")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getTimeDifference(@QueryParam("hour1") int hour1,
-                                                      @QueryParam("min1")  int min1,
-                                                      @QueryParam("hour2") int hour2,
-                                                      @QueryParam("min2") int min2)
+    public Response getTimeDifference(@NotNull  @Pattern(regexp = "\\d+") @QueryParam("hour1")  int hour1,
+                                      @NotNull  @Pattern(regexp = "\\d+") @QueryParam("min1")int min1,
+                                      @NotNull @Pattern(regexp = "\\d+")  @QueryParam("hour2") int hour2,
+                                      @NotNull @Pattern(regexp = "\\d+")  @QueryParam("min2") int min2)
     {
+
         long minDiff = 0;
         long hrDiff = 0;
 
