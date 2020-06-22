@@ -73,9 +73,10 @@ public class MyResource {
             if (hour1 > hour2) {
                 hrDiff = Math.abs((hour1 - hour2) - 24);
             }
-            /*else if (hour1<hour2){
-                        hrDiff=Math.abs((hour1-hour2)-24);
-                }*/
+            else if (hour1<hour2){
+                        hrDiff=Math.abs(hour1-hour2);
+                }
+
         } else {
             hrDiff = Math.abs(hour1 - hour2);
             if (hrDiff == 0) {
