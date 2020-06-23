@@ -42,13 +42,14 @@ public class MyResource {
             min1 = 60 - min1;
             min2 = 60 - min2;
 
-            minDiff = Math.abs(min1 - min2);
-            hrDiff = Math.abs(hour1 - hour2);
 
+           // minDiff = min1-min2;
+           // hrDiff = Math.abs(hour1 - hour2)+1;
+            minDiff = Math.abs(min1 - min2);
             if (hour2 > hour1) {
                 hrDiff = Math.abs(hour1 - hour2);
             } else if (hour1 > hour2) {
-                hrDiff = 24 - Math.abs(hour1 - hour2) - 1;
+                hrDiff = 24 - Math.abs(hour1 - hour2) ;
             }
 
 
@@ -72,10 +73,9 @@ public class MyResource {
         } else if (min1 == min2) {
             if (hour1 > hour2) {
                 hrDiff = Math.abs((hour1 - hour2) - 24);
+            } else if (hour1 < hour2) {
+                hrDiff = Math.abs(hour1 - hour2);
             }
-            else if (hour1<hour2){
-                        hrDiff=Math.abs(hour1-hour2);
-                }
 
         } else {
             hrDiff = Math.abs(hour1 - hour2);
